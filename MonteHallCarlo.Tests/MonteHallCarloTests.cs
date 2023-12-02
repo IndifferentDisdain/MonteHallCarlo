@@ -35,4 +35,22 @@ public class MonteHallCarloTests
         // Assert
         Assert.Equal(shouldBeCorrect, game.IsUserCorrect);
     }
+
+    [Fact]
+    public void SwapChoice()
+    {
+        // Arrange
+        var game = new MonteHallGameTestOverride();
+        game.SetCorrectOptionOverride(UserSelection.First);
+
+        // Act
+        game.MakeUserSelection(UserSelection.First);
+        game.SwapUserSelection();
+
+        // Assert
+        Assert.NotNull(game.SelectedOption);
+        Assert.NotEqual(UserSelection.First, game.SelectedOption.UserSelection);
+        Assert.Equal(UserSelection.First, game.CorrectOption.UserSelection);
+        Assert.False(game.IsUserCorrect);
+    }
 }
