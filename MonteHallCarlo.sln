@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteHallCarlo.Tests", "MonteHallCarlo.Tests\MonteHallCarlo.Tests.csproj", "{200F4B6E-B5AF-4CD2-81AA-67523AA96D95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteHallCarlo.Console", "MonteHallCarlo.Console\MonteHallCarlo.Console.csproj", "{9B883DD1-91AB-4B08-B397-38FE57F7A96F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteHallCarlo.Models", "MonteHallCarlo.Models\MonteHallCarlo.Models.csproj", "{3A0E7DC0-8EBB-483E-848C-D2E74E291BD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{200F4B6E-B5AF-4CD2-81AA-67523AA96D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{200F4B6E-B5AF-4CD2-81AA-67523AA96D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{200F4B6E-B5AF-4CD2-81AA-67523AA96D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{200F4B6E-B5AF-4CD2-81AA-67523AA96D95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B883DD1-91AB-4B08-B397-38FE57F7A96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B883DD1-91AB-4B08-B397-38FE57F7A96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B883DD1-91AB-4B08-B397-38FE57F7A96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B883DD1-91AB-4B08-B397-38FE57F7A96F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0E7DC0-8EBB-483E-848C-D2E74E291BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0E7DC0-8EBB-483E-848C-D2E74E291BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0E7DC0-8EBB-483E-848C-D2E74E291BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0E7DC0-8EBB-483E-848C-D2E74E291BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
