@@ -13,7 +13,7 @@ internal class Program
 
         System.Console.WriteLine($"Running {numberOfTestsToRun} tests where user does not change selection...");
         var numberFirstRunCorrect = 0;
-        for(var i = 0; i < 10000; i++)
+        for(var i = 0; i < numberOfTestsToRun; i++)
         {
             if (RunGame(false))
             {
@@ -23,7 +23,7 @@ internal class Program
 
         System.Console.WriteLine("Running 10,0000 tests where user does change selection...");
         var numberSecondRunCorrect = 0;
-        for(var i = 0; i < 10000; i++)
+        for(var i = 0; i < numberOfTestsToRun; i++)
         {
             if (RunGame(true))
             {
@@ -39,7 +39,7 @@ internal class Program
     private static bool RunGame(bool swapChoice)
     {
         var game = new MonteHallGame();
-        var randomUserSelection = UserSelection.First;
+        var randomUserSelection = GetRandomUserSelection();
         game.MakeUserSelection(randomUserSelection);
         if (swapChoice)
         {
@@ -48,4 +48,12 @@ internal class Program
 
         return game.IsUserCorrect;
     }
+
+    private static UserSelection GetRandomUserSelection()
+    {
+        var values = Enum.GetValues(typeof(UserSelection));
+        var random = new Random();
+        return (UserSelection)(values.GetValue(random.Next(values.Length)) ?? UserSelection.Second);
+    }
+    
 }
