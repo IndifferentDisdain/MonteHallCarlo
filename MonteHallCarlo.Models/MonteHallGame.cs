@@ -2,7 +2,7 @@ namespace MonteHallCarlo.Models;
 
 /// <summary>
 /// Classic Monte Hall game. User picks one of 3 doors, where one is worth money.
-/// User is told which option is incorrect, and then asked if they want to swap
+/// User is told one option which is incorrect, and then asked if they want to swap
 /// their pick to the other potential option.
 /// After that, the user is shown if their chosen option is the correct one.
 /// </summary>
@@ -10,9 +10,9 @@ public class MonteHallGame
 {
     private readonly List<GameOption> _gameOptions = new(3)
     {
-        new GameOption { UserSelection = UserSelection.First},
-        new GameOption {UserSelection = UserSelection.Second},
-        new GameOption {UserSelection = UserSelection.Third}
+        new GameOption { UserSelection = UserSelection.First },
+        new GameOption { UserSelection = UserSelection.Second },
+        new GameOption { UserSelection = UserSelection.Third }
     };
 
     public MonteHallGame()
@@ -57,11 +57,10 @@ public class MonteHallGame
         _gameOptions.Single(x => x.UserSelection == newCorrectOption).IsCorrect = true;
     }
 
-    private UserSelection GetRandomCorrectAnswer()
+    private static UserSelection GetRandomCorrectAnswer()
     {
         var values = Enum.GetValues(typeof(UserSelection));
         var random = new Random();
         return (UserSelection)(values.GetValue(random.Next(values.Length)) ?? UserSelection.Second);
     }
-    
 }

@@ -4,6 +4,7 @@ using MonteHallCarlo.Models;
 
 namespace MonteHallCarlo.Console;
 
+// ReSharper disable once ClassNeverInstantiated.Global
 internal class Program
 {
     public static void Main(string[] args)
@@ -21,7 +22,7 @@ internal class Program
             }
         }
 
-        System.Console.WriteLine("Running 10,0000 tests where user does change selection...");
+        System.Console.WriteLine($"Running {numberOfTestsToRun} tests where user does change selection...");
         var numberSecondRunCorrect = 0;
         for(var i = 0; i < numberOfTestsToRun; i++)
         {
