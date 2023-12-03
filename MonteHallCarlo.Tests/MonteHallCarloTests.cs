@@ -1,4 +1,4 @@
-    using MonteHallCarlo.Models;
+using MonteHallCarlo.Models;
 
 namespace MonteHallCarlo.Tests;
 
