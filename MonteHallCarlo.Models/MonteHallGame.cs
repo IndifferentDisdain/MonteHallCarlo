@@ -22,18 +22,35 @@ public class MonteHallGame
         correctOption.IsCorrect = true;
     }
 
+    /// <summary>
+    /// Gets the currently-selected user option.
+    /// </summary>
     public GameOption? SelectedOption => _gameOptions.SingleOrDefault(x => x.IsSelected);
 
+    /// <summary>
+    /// Gets the correct option.
+    /// </summary>
     public GameOption CorrectOption => _gameOptions.Single(x => x.IsCorrect);
 
+    /// <summary>
+    /// Gets if the current selected option is the correct option.
+    /// </summary>
     public bool IsUserCorrect => SelectedOption == CorrectOption;
 
-    public void MakeUserSelection(UserSelection selection)
+    /// <summary>
+    /// Sets the user's selected option
+    /// </summary>
+    /// <param name="selection"></param>
+    public void SetUserSelection(UserSelection selection)
     {
         var selectedOption = _gameOptions.Single(x => x.UserSelection == selection);
         selectedOption.IsSelected = true;
     }
 
+    /// <summary>
+    /// Swaps the user selection. Called after the user sees an option that is incorrect
+    /// and is asked if they'd like to change their selection.
+    /// </summary>
     public void SwapUserSelection()
     {
         var eliminatedOption = _gameOptions.First(x => x is { IsCorrect: false, IsSelected: false });

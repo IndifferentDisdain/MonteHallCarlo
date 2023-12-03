@@ -41,7 +41,7 @@ internal class Program
     {
         var game = new MonteHallGame();
         var randomUserSelection = GetRandomUserSelection();
-        game.MakeUserSelection(randomUserSelection);
+        game.SetUserSelection(randomUserSelection);
         if (swapChoice)
         {
             game.SwapUserSelection();

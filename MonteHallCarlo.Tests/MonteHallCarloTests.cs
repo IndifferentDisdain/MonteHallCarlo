@@ -26,7 +26,7 @@ public class MonteHallCarloTests
         game.SetCorrectOptionOverride(correctSelection);
 
         // Act
-        game.MakeUserSelection(userSelection);
+        game.SetUserSelection(userSelection);
         if (swapChoice)
         {
             game.SwapUserSelection();
@@ -44,7 +44,7 @@ public class MonteHallCarloTests
         game.SetCorrectOptionOverride(UserSelection.First);
 
         // Act
-        game.MakeUserSelection(UserSelection.First);
+        game.SetUserSelection(UserSelection.First);
         game.SwapUserSelection();
 
         // Assert
